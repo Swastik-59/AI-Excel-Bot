@@ -25,7 +25,7 @@ function PlayGround() {
         setIsFetching(true);
         setError("");
         try {
-            const res = await axios.post("http://localhost:3000/api", { prompt, activeButton, sheetType });
+            const res = await axios.post("/api", { prompt, activeButton, sheetType });
             setResponse(res.data);
         } catch (e) {
             console.error(e);
